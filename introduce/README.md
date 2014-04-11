@@ -64,3 +64,10 @@ p.enter().append('p').text('I am new');
 ```
 
 如果沒有使用enter和exit，會導致新添加的數據沒有添加到頁面，刪除的數據沒有從頁面上移除
+
+### Transformation, not Representation
+d3不是一種新的圖形化展示(graphical representation), 通過web標準,SVG,CSS,HTML等等來進行構建。
+
+### 動畫
+
+
