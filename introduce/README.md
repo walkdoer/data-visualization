@@ -62,3 +62,5 @@ var p = d3.select("body").selectAll("p")
 
 p.enter().append('p').text('I am new');
 ```
+
+如果沒有使用enter和exit，會導致新添加的數據沒有添加到頁面，刪除的數據沒有從頁面上移除

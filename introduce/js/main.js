@@ -33,3 +33,16 @@ var p = d3.select("body").selectAll("p")
     .text(updatedNum);
 
 p.enter().append('p').text('I am new');
+
+// fade the background of the page to black:
+//d3.select("body").transition()
+//    .style("background-color", "black");
+var scale = 1.4;    
+d3.selectAll("circle").data([20, 30 ,40]).transition()
+    .duration(750)
+    .delay(function(d, i) {
+        return i * 10; 
+    })
+    .attr("r", function(d) { 
+        return Math.sqrt(d * scale); 
+    });

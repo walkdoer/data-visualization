@@ -12,12 +12,31 @@
                 height: 700px;
             }
             p {height:40px; background-color: #CCC;}
+            .chart {
+                background: #fff;
+                border: solid 1px #ddd;
+                box-shadow: 0 0 4px rgba(0,0,0,.2);
+                font: 10px sans-serif;
+                height: 180px;
+                position: relative;
+                width: 720px;
+            }
+            .chart circle.little {
+                fill: #aaa;
+                stroke: #666;
+                stroke-width: 1.5px;
+            }
         </style>
     </head>
     <body>
         <p></p>
         <p></p>
         <script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+        <svg width="360" height="180">
+            <circle class="little" cx="180" cy="45" r="12"></circle>
+            <circle class="little" cx="180" cy="89" r="12"></circle>
+            <circle class="little" cx="180" cy="120" r="12"></circle>
+        </svg>
     </body>
 </html>
 
