@@ -2,6 +2,11 @@
 
 Bar Chart可以精确的感知数据的大小。
 
+###SVG
+[W3C文档 Scalable Vector Graphics (SVG) 1.1 (Second Edition)](http://www.w3.org/TR/SVG/)
+
+http://bl.ocks.org/mbostockhttp://bl.ocks.org/mbostock
+
 
 ###参考
 
