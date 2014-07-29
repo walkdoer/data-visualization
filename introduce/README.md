@@ -26,6 +26,8 @@ d3.selectAll("p")
 ### Enter 和 Exit
 Using D3’s enter and exit selections, you can create new nodes for incoming data and remove outgoing nodes that are no longer needed.
 
+> Whenever this code is run, it recomputes the data join and maintains the desired correspondence between elements and data. If the new dataset is smaller than the old one, the surplus elements end up in the exit selection and get removed. If the new dataset is larger, the surplus data ends up in the enter selection and new nodes are added. If the new dataset is exactly the same size, then all the elements are simply updated with new positions, and no elements are added or removed.
+
 * enter：新添加進來的節點
 * exit: 即將刪除的節點
 
