@@ -229,16 +229,25 @@
         return d3.select(selector).datum(data).call(plot);
     };
 
+
     $(function() {
         var fileName = 'data2.json';
         var key, plot, plotData = root.plotData;
         plot = Bubbles();
         key = decodeURIComponent(location.search).replace("?", "");
         d3.json("./js/" + fileName, function(error, root) {
-            return plotData("#vis", root.data, plot);
+            var data = preprocessData(root.data);
+            return plotData("#vis", data, plot);
         });
-        //d3.csv("../../../data/top_sherlock.csv", function(error, data) {
-        //    return plotData("#vis-example", data, plot);
-        //});
+        d3.csv("../../../data/top_sherlock.csv", function(error, data) {
+            console.log(data);
+        });
+
+        function preprocessData(data) {
+            data.forEach(function (item) {
+                item.name = item.word;
+            });
+            return data;
+        }
     });
 })(window, window.d3);
