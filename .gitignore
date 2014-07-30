@@ -1,2 +1,4 @@
 *.swp
+*.swo
+examples/gates_bubbles/
 d3/
