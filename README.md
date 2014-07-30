@@ -14,6 +14,10 @@ data-visualization
     └── js             代碼 javascript
 ```
 
+## 例子
+
+[气泡图:Gates Bubbles]( http://vallandingham.me/gates_bubbles/)
+
 ## 資源
 - [d3官网](http://d3js.org/)
 - [d3 wiki](https://github.com/mbostock/d3/wiki)

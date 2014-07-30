@@ -39,9 +39,24 @@
             return (Math.sqrt(d) - fontSize) / 2;
         });
 
+    var nodes = createNodes(circles);
     d3.layout.force()
-        .nodes(circles)
+        .nodes(nodes)
         .size([720, 720])
         .start();
 
+
+
+    function createNodes(circles) {
+        var nodes = [];
+        circles.each(function (a, b) {
+            nodes.push({
+                x: 100,
+                y: 100,
+                px: 100,
+                py: 100,
+                index: 100
+            });
+        });
+    }
 })(window.d3);

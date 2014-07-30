@@ -81,7 +81,7 @@
                 return d.target.y;
             });
 
-            node.attr("cx", function(d) {
+        node.attr("cx", function(d) {
                 return d.x;
             })
             .attr("cy", function(d) {
