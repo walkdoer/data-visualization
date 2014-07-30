@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../d3/d3.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .chart-svg rect {
+            fill: steelblue;
+        }
+        .chart-svg text {
+            fill: white;
+            font: 10px sans-serif;
+            text-anchor: end;
+        }
+        .chart div,
+        .chart-with-data div{
+            font: 10px sans-serif;
+            background-color: steelblue;
+            text-align: right;
+            padding: 3px;
+            margin: 1px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chart-with-data">
+        
+    </div>
+
+    <p> Normal Example </p>
+    <div class="chart"></div>
+
+    <!-- SVG example-->
+    <p> SVG Example </p>
+    <svg class="chart-svg"></svg>
+    <script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,7 +1,8 @@
 ##入門
 
-### 基本的操作
+### Selections
 
+更多参考[How Selectio work](http://bost.ocks.org/mike/selection/)
 
 下面的接口熟悉JQuery的一定不會陌生
 
@@ -27,6 +28,8 @@ d3.selectAll("p")
 Using D3’s enter and exit selections, you can create new nodes for incoming data and remove outgoing nodes that are no longer needed.
 
 > Whenever this code is run, it recomputes the data join and maintains the desired correspondence between elements and data. If the new dataset is smaller than the old one, the surplus elements end up in the exit selection and get removed. If the new dataset is larger, the surplus data ends up in the enter selection and new nodes are added. If the new dataset is exactly the same size, then all the elements are simply updated with new positions, and no elements are added or removed.
+
+[更多参考 http://bost.ocks.org/mike/join/](http://bost.ocks.org/mike/join/)
 
 * enter：新添加進來的節點
 * exit: 即將刪除的節點
