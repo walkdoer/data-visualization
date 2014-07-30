@@ -16,7 +16,12 @@ data-visualization
 
 ## 例子
 
+[一大堆的例子](http://christopheviau.com/d3list/)
+
 [气泡图:Gates Bubbles]( http://vallandingham.me/gates_bubbles/)
+[气泡图:与地图结合](http://bost.ocks.org/mike/bubble-map/)
+[气泡图:](http://vallandingham.me/building_a_bubble_cloud.html)[(demo)](http://rud.is/d3/vzwords/#vulnerability)
+[文字云](http://rud.is/b/2013/03/06/visualizing-risky-words/)
 
 ## 資源
 - [d3官网](http://d3js.org/)

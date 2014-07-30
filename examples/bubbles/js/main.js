@@ -1,17 +1,19 @@
 (function(window, d3) {
     'use strict';
-    var diameter = 960,
+    var diameter = 700,
+        width =  800,
+        height = 800,
         format = d3.format(",d"),
         color = d3.scale.category20c();
 
     var bubble = d3.layout.pack()
         .sort(null)
-        .size([diameter, diameter])
-        .padding(1.5);
+        .size([width, height])
+        .padding(20);
 
     var svg = d3.select("body").append("svg")
-        .attr("width", diameter)
-        .attr("height", diameter)
+        .attr("width", width)
+        .attr("height", height)
         .attr("class", "bubble");
 
     d3.json("./js/data.json", function(error, root) {
@@ -71,5 +73,5 @@
         };
     }
 
-    d3.select(window.frameElement).style("height", diameter + "px");
+    d3.select(window.frameElement).style("height", height + "px");
 })(window, window.d3);
