@@ -3,7 +3,7 @@ data-visualization
 
 数据可视化学习
 
-##目錄結構
+##Directory
 ```
 ├── LEARN-LOG.md       學習日誌記錄
 ├── README.md          項目介紹文件
@@ -14,7 +14,15 @@ data-visualization
     └── js             代碼 javascript
 ```
 
-## 例子
+## run
+
+run the following command in the root directory of the project
+
+```
+python  -m SimpleHTTPServer 4000
+```
+
+## Example
 
 这里有[一大堆的例子](http://christopheviau.com/d3list/)
 
@@ -24,17 +32,18 @@ data-visualization
 - [文字云](http://rud.is/b/2013/03/06/visualizing-risky-words/)
 - [文字云（纯文字）](http://bl.ocks.org/ericcoopey/6382449)
 
-## 資源
+## Resources
 - [d3官网](http://d3js.org/)
 - [d3 gallery](https://github.com/mbostock/d3/wiki/Gallery)
 - [d3 wiki](https://github.com/mbostock/d3/wiki)
 - [mbostock’s blocks](http://bl.ocks.org/mbostock),大量的例子
 - [d3 Tutorials](https://github.com/mbostock/d3/wiki/Tutorials)
 
-## 博客
+## Blog
 
 - [rud.is](http://rud.is/b/)
 
-## 书籍
+
+## Book
 
 - interactive data visualization for the web

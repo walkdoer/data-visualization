@@ -1,6 +1,8 @@
 Layout
 =============================
 
+[官方文档](https://github.com/mbostock/d3/wiki/Force-Layout)
+
 
 ### Layout.force
 
@@ -14,3 +16,7 @@ The gravity force isn't actually a true representation of gravitational attracti
 The frictional force is one designed to act on the movement of a node to reduce it's speed over time. It isn't implemented as true friction (in the physical sense) and should be thought of as a 'velocity decay' in the truer sense.
 
 Mike makes the point in the 2011 talk at Trulia that when using gravity in a force layout diagram, it is useful to include a degree of charge repulsion to provide stability. This can be demonstrated by experimenting with varying values of the charges in a diagram and observing the effects.
+
+### 参考的例子
+
+1. [static layout force](http://bl.ocks.org/mbostock/1667139)

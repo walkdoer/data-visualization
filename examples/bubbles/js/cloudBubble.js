@@ -29,7 +29,7 @@
         textValue = function(d) {
             return d.name;
         };
-        collisionPadding = 12;
+        collisionPadding = 4;
         minCollisionRadius = 12;
         jitter = 0.5;
         transformData = function(rawData) {
@@ -53,7 +53,7 @@
                 return ((margin.top + d.y) - d.dy / 2) + "px";
             });
         };
-        force = d3.layout.force().gravity(0).charge(0.6).size([width, height]).on("tick", tick);
+        force = d3.layout.force().gravity(0).charge(-80).size([width, height]).on("tick", tick);
         chart = function(selection) {
             return selection.each(function(rawData) {
                 var maxDomainValue, svg, svgEnter;
