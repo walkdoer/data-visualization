@@ -31,6 +31,7 @@ python  -m SimpleHTTPServer 4000
 - [气泡图:](http://vallandingham.me/building_a_bubble_cloud.html)[(demo)](http://rud.is/d3/vzwords/#vulnerability)
 - [文字云](http://rud.is/b/2013/03/06/visualizing-risky-words/)
 - [文字云（纯文字）](http://bl.ocks.org/ericcoopey/6382449)
+- [雨果小说的人物统计](http://bost.ocks.org/mike/miserables/)
 
 ## Resources
 - [d3官网](http://d3js.org/)
