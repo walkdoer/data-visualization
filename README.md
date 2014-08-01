@@ -22,6 +22,7 @@ data-visualization
 - [气泡图:与地图结合](http://bost.ocks.org/mike/bubble-map/)
 - [气泡图:](http://vallandingham.me/building_a_bubble_cloud.html)[(demo)](http://rud.is/d3/vzwords/#vulnerability)
 - [文字云](http://rud.is/b/2013/03/06/visualizing-risky-words/)
+- [文字云（纯文字）](http://bl.ocks.org/ericcoopey/6382449)
 
 ## 資源
 - [d3官网](http://d3js.org/)

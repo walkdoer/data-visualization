@@ -8,7 +8,7 @@
     Bubbles = function() {
         var chart, clear, click, collide, collisionPadding, connectEvents, data, force, gravity, hashchange, height, idValue, jitter, label, margin, maxRadius, minCollisionRadius, mouseout, mouseover, node, rScale, rValue, textValue, tick, transformData, update, updateActive, updateLabels, updateNodes, width;
         width = 980;
-        height = 510;
+        height = 250;
         data = [];
         node = null;
         label = null;
@@ -29,8 +29,8 @@
         textValue = function(d) {
             return d.name;
         };
-        collisionPadding = 4;
-        minCollisionRadius = 20;
+        collisionPadding = 12;
+        minCollisionRadius = 12;
         jitter = 0.5;
         transformData = function(rawData) {
             rawData.forEach(function(d) {
@@ -53,7 +53,7 @@
                 return ((margin.top + d.y) - d.dy / 2) + "px";
             });
         };
-        force = d3.layout.force().gravity(0).charge(0).size([width, height]).on("tick", tick);
+        force = d3.layout.force().gravity(0).charge(0.6).size([width, height]).on("tick", tick);
         chart = function(selection) {
             return selection.each(function(rawData) {
                 var maxDomainValue, svg, svgEnter;
@@ -90,7 +90,7 @@
             return node.enter().append("a").attr("class", "bubble-node").attr("xlink:href", function(d) {
                 return "#" + (encodeURIComponent(idValue(d)));
             }).call(force.drag).call(connectEvents).append("circle").attr("r", function(d) {
-                return Math.max(20, rScale(rValue(d)));
+                return Math.max(rScale(rValue(d)));
             });
         };
         updateLabels = function() {
