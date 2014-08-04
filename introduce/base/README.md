@@ -74,11 +74,52 @@ d3.selectAll('div').data(dataArr)
     .enter()
     .append('g');
 ```
+有关update,exit和enter参考[http://bost.ocks.org/mike/join/]
 
 **如果参数为空 `.data()` 返回的是第一组的数据**
 > If values is not specified, then this method returns the array of data for the first group in the selection
 
-有关update,exit和enter参考[http://bost.ocks.org/mike/join/]
+**和datum的区别**
+> Unlike the selection.data method, this method does not compute a join (and thus does not compute enter and exit selections).
+[更多datum](https://github.com/mbostock/d3/wiki/Selections#datum)
+
+####selection.call()
+
+```
+function foo(selection) {
+  selection
+      .attr("name1", "value1")
+      .attr("name2", "value2");
+}
+
+foo(d3.selectAll('div'));
+```
+或者
+
+```
+d3.selectAll('div').call(foo);
+```
+
+如果是使用对象的方法:
+```
+function Foo(text) {
+    this.text = text;
+}
+
+Foo.prototype.setText = function(selection) {
+    selection.text(this.text);
+}
+
+var bar = new Foo("Bar");
+
+d3.selectAll("span").call(bar.setText.bind(bar));
+// Or
+d3.selectAll("span").call(Foo.prototype.setText.bind(bar));
+```
+
+
+
+
 
 
 ### Enter 和 Exit
