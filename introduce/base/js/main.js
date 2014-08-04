@@ -45,3 +45,22 @@ d3.selectAll("circle").data([20, 30 ,40]).transition()
     .attr("r", function(d) {
         return Math.sqrt(d * scale);
     });
+
+var data = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10]
+];
+var row = d3.select('.com-selectTest')
+    .append('table')
+    .selectAll('tr')
+    .data(data)
+    .enter()
+    .append('tr');
+
+row.selectAll('td')
+    .data(function (d) {
+        return d;
+    })
+    .enter()
+    .append('td')
+    .text(function (d, i) { return d;});

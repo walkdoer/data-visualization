@@ -24,6 +24,47 @@ d3.selectAll("p")
     .style("font-size", function(d) { return d + "px"; });
 ```
 
+
+#### Selections.data(values, key)
+
+**简单用法**
+```
+d3.selectAll('p').data([1,2,3,4]).enter().append('p');
+```
+
+**处理复合结构**
+
+```
+d3.selectAll('p').data(data, function(d) { return d.name; });
+```
+
+**处理二维数据**
+
+```
+var matrix = [
+  [11975,  5871, 8916, 2868],
+  [ 1951, 10048, 2060, 6171],
+  [ 8010, 16145, 8090, 8045],
+  [ 1013,   990,  940, 6907]
+];
+
+var tr = d3.select("body").append("table").selectAll("tr")
+    .data(matrix)
+  .enter().append("tr");
+
+var td = tr.selectAll("td")
+    //官方这样描述：The values function in this case is the identity function: it is invoked for each group of child elements, being passed the data bound to the parent element, and returns this array of data.
+    .data(function(d) {
+        //注意： 这里的d是一个数组
+        //例如: [11975,  5871, 8916, 2868]
+        return d;
+    })
+    .enter().append("td")
+    .text(function(d) { return d; });
+```
+
+
+
 ### Enter 和 Exit
 Using D3’s enter and exit selections, you can create new nodes for incoming data and remove outgoing nodes that are no longer needed.
 
