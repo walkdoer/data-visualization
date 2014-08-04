@@ -10,7 +10,6 @@ function updatedNum(d) {
 }    
 d3.select(".com-lineTest").selectAll("p")
     .data([1, 2, 3, 4, 5])
-    .text(getNum)
     .enter().append('p').text(getNum);
     
 
@@ -64,3 +63,19 @@ row.selectAll('td')
     .enter()
     .append('td')
     .text(function (d, i) { return d;});
+
+//update
+row = d3.select('.com-selectTest table')
+    .selectAll('tr')
+    .data([
+        [2, 2, 2, 4],
+        [1, 2, 4]
+    ]);
+
+var col = row.selectAll('td')
+    .data(function(d) {return d;})
+    .text(function (d) {
+        return d;
+    });
+row.exit().remove();
+col.exit().remove();

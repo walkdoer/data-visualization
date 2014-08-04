@@ -117,7 +117,43 @@ d3.selectAll("span").call(bar.setText.bind(bar));
 d3.selectAll("span").call(Foo.prototype.setText.bind(bar));
 ```
 
+#### 更新selection
 
+一般的更新方式：
+```
+var p = d3.select(".example").selectAll("p")
+    .data([6, 7, 8, 9, 10])
+    .enter()
+    .append('p')
+    .text(getText);
+
+//更新selection
+p = d3.select(".example").selectAll("p")
+    .data([6, 7, 8])
+    .text(getText);
+
+p.exit().remove();
+```
+
+对二维数组进行更新
+```
+
+row = d3.select('.com-selectTest table')
+    .selectAll('tr')
+    .data([
+        [2, 2, 2, 4],
+        [1, 2, 4]
+    ]);
+
+var col = row.selectAll('td')
+    .data(function(d) {return d;})
+    .text(function (d) {
+        return d;
+    });
+row.exit().remove();
+col.exit().remove();
+
+```
 
 
 
