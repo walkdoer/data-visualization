@@ -63,6 +63,22 @@ var td = tr.selectAll("td")
     .text(function(d) { return d; });
 ```
 
+**selection.data(value, key)的返回结果**
+
+data(value, key)函数的返回结果是update的节点，代表了成功绑定数据的Dom节点，其中还包括了exit和enter的reference
+
+例如经常会那么用:
+
+```
+d3.selectAll('div').data(dataArr)
+    .enter()
+    .append('g');
+```
+
+**如果参数为空 `.data()` 返回的是第一组的数据**
+> If values is not specified, then this method returns the array of data for the first group in the selection
+
+有关update,exit和enter参考[http://bost.ocks.org/mike/join/]
 
 
 ### Enter 和 Exit
