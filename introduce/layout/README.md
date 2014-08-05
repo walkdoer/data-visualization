@@ -20,3 +20,5 @@ Mike makes the point in the 2011 talk at Trulia that when using gravity in a for
 ### 参考的例子
 
 1. [static layout force](http://bl.ocks.org/mbostock/1667139)
+2. [可折叠的force layout](http://bl.ocks.org/mbostock/1093130)
+3.[一个不错的例子](http://nyquist212.wordpress.com/2014/03/11/simple-d3-js-force-layout-example-in-less-than-100-lines-of-code/)

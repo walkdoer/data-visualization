@@ -137,7 +137,6 @@ p.exit().remove();
 
 对二维数组进行更新
 ```
-
 row = d3.select('.com-selectTest table')
     .selectAll('tr')
     .data([

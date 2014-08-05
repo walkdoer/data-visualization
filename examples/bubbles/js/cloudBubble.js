@@ -31,7 +31,7 @@
         };
         collisionPadding = 4;
         minCollisionRadius = 12;
-        jitter = 0.5;
+        jitter = 0.4;
         transformData = function(rawData) {
             rawData.forEach(function(d) {
                 d.count = parseInt(d.count);
@@ -44,6 +44,7 @@
         tick = function(e) {
             var dampenedAlpha;
             dampenedAlpha = e.alpha * 0.1;
+            console.log(e.alpha);
             node.each(gravity(dampenedAlpha)).each(collide(jitter)).attr("transform", function(d) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
@@ -53,7 +54,7 @@
                 return ((margin.top + d.y) - d.dy / 2) + "px";
             });
         };
-        force = d3.layout.force().gravity(0).charge(-80).size([width, height]).on("tick", tick);
+        force = d3.layout.force().gravity(0).size([width, height]).on("tick", tick);
         chart = function(selection) {
             return selection.each(function(rawData) {
                 var maxDomainValue, svg, svgEnter;
