@@ -44,6 +44,7 @@ python  -m SimpleHTTPServer 4000
 
 - [rud.is](http://rud.is/b/)
 
+- [](http://www.logeeka.com/)
 
 ## Book
 

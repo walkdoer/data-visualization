@@ -18,13 +18,25 @@
     var BubbleCloud = function (width, height) {
         this.width = width;
         this.height = height;
+        this.force = d3.layout.force()
+                       .gravity(0)
+                       .charge(0)
+                       .size([width, height])
+                       .on('tick', tick);
     };
+
+    BubbleCloud.prototype.tick = function () {
+        
+    }
 
     BubbleCloud.prototype.data = function () {
     };
 
     BubbleCloud.prototype.plot = function () {
 
+        d3.select(selector)
+            .append('svg')
+            .append('g').attr("id", "bubble-nodes");
     };
 
 
@@ -44,6 +56,10 @@
             item.name = item.word;
         });
         return data;
+    }
+
+    function getTranslate(x, y) {
+        return 'translate(' + x + ',' + y + ')';
     }
 
 })(window, window.d3);

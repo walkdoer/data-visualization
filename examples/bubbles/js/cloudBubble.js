@@ -54,7 +54,7 @@
                 return ((margin.top + d.y) - d.dy / 2) + "px";
             });
         };
-        force = d3.layout.force().gravity(0).size([width, height]).on("tick", tick);
+        force = d3.layout.force().gravity(0).charge(0).size([width, height]).on("tick", tick);
         chart = function(selection) {
             return selection.each(function(rawData) {
                 var maxDomainValue, svg, svgEnter;
