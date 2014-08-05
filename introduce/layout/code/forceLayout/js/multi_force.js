@@ -48,16 +48,30 @@
         // Push different nodes in different directions for clustering.
         var k = 6 * e.alpha;
         nodes.forEach(function(o, i) {
+            // 0 & 1 = 0, 1 & 1 = 1
+            // 0,1,0,1,....
             o.y += i & 1 ? k : -k;
+            // 0 & 2 = 0, 1 & 2 = 0, 2 & 2 = 1, 3 & 2 = 2
+            // 0,0,1,2,0,0,1,2.....
             o.x += i & 2 ? k : -k;
         });
 
         node.attr("cx", function(d) {
-                return d.x;
-            })
+            return d.x;
+        })
             .attr("cy", function(d) {
                 return d.y;
             });
+    }
+    d3.select("body")
+        .on("mousedown", mousedown);
+
+    function mousedown() {
+        nodes.forEach(function(o, i) {
+            o.x += (Math.random() - .5) * 40;
+            o.y += (Math.random() - .5) * 40;
+        });
+        force.resume();
     }
 
 })(window, window.d3);
