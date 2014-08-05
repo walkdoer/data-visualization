@@ -44,6 +44,12 @@
             d3.event.stopPropagation();
         });
 
+    //hide the svg first, can make the animation smooth
+    svg.style("opacity", 1e-6)
+        .transition()
+        .duration(1000)
+        .style("opacity", 1);
+
     function tick(e) {
         // Push different nodes in different directions for clustering.
         var k = 6 * e.alpha;
